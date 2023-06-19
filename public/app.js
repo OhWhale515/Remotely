@@ -52,6 +52,24 @@ function generateAuthToken() {
   return token;
 }
 
+// Add a new screen to the screens container
+function addScreenElement(screenId) {
+  const screensContainer = document.getElementById('screensContainer');
+  const screenElement = document.createElement('div');
+  screenElement.id = `screen-${screenId}`;
+  screenElement.classList.add('screen');
+  screenElement.innerText = `Screen ${screenId}`;
+  screensContainer.appendChild(screenElement);
+}
+
+// Remove a screen from the screens container
+function removeScreenElement(screenId) {
+  const screenElement = document.getElementById(`screen-${screenId}`);
+  if (screenElement) {
+    screenElement.parentNode.removeChild(screenElement);
+  }
+}
+
 // Socket.io logic
 const socket = io();
 
@@ -70,6 +88,13 @@ socket.on('authenticationError', () => {
 socket.on('screenData', (data) => {
   // Process the received screen data
   console.log('Received screen data:', data);
+  addScreenElement(data.screenId);
+});
+
+socket.on('stopScreenSharing', (data) => {
+  // Remove screen from the screens container
+  console.log('Screen sharing stopped:', data);
+  removeScreenElement(data.screenId);
 });
 
 socket.on('disconnect', () => {
