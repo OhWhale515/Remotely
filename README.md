@@ -12,7 +12,7 @@ Features
 - Screen sharing
 - Viewing shared screens
 - Toggle screen sharing
-- Simple AWS Console style interface
+
 
 Prerequisites
 -------------
@@ -23,22 +23,19 @@ Prerequisites
 Getting Started
 ---------------
 
-1. Clone the repository:
 
-   git clone https://github.com/your-username/your-repo.git
-
-2. Install the dependencies:
+1. Install the dependencies:
 
    cd your-repo
    npm install
 
-3. Start the server:
+2. Start the server:
 
    node server.js
 
-4. Open a web browser and navigate to http://<serverIP>:3000 or http://localhost:3000.
+3. Open a web browser and navigate to http://<serverIP>:3000 or http://localhost:3000.
 
-5. Enter the login credentials (username: "admin", password: "password") to access the application.
+4. Enter the login credentials (username: "admin", password: "password") to access the application.
 
 Usage
 -----
