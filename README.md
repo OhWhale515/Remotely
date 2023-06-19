@@ -33,7 +33,7 @@ Getting Started
 
    node server.js
 
-3. Open a web browser and navigate to http://<serverIP>:3000 or http://localhost:3000.
+3. Open a web browser and navigate to http://<your.server.IP.Here>:3000 or http://localhost:3000.
 
 4. Enter the login credentials (username: "admin", password: "password") to access the application.
 
