@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remote Desktop Application</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="loginForm">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button id="loginBtn" type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="app" style="display: none;">
+    <h1>Remote Desktop Application</h1>
+
+    <div id="screensContainer"></div>
+
+    <button id="toggleScreenSharingBtn">Toggle Screen Sharing</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
